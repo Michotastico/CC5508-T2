@@ -14,7 +14,7 @@ diffuse_1 = Diffuse.Diffuse(functions.h1)
 diffuse_2 = Diffuse.Diffuse(functions.h2)
 
 
-def test_k():
+def test_h():
     counter = 0
     for image_path in images_path:
         print "Working with " + image_path+" at "+str(datetime.datetime.now())
