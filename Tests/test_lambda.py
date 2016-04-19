@@ -1,6 +1,7 @@
 from Algorithm import Diffuse, functions
 from skimage import io
 import matplotlib.pyplot as plt
+import datetime
 __author__ = 'Michel Llorens A.'
 __email__ = 'mllorens@dcc.uchile.cl'
 
@@ -9,17 +10,20 @@ images_path = functions.images_path()
 lambda_1 = 0.10
 lambda_2 = 0.25
 k = 20
-i = 20
+i = 10
 diffuse = Diffuse.Diffuse(functions.h1)
 
 
 def test_lambda():
     counter = 0
     for image_path in images_path:
+        print "Working with "+image_path+" at "+str(datetime.datetime.now())
         image = io.imread(image_path)
+        print "Lamda 1 at "+str(datetime.datetime.now())
         diffuse1 = diffuse.apply(image_path, lambda_1, k, i)
+        print "Lamda 2 at "+str(datetime.datetime.now())
         diffuse2 = diffuse.apply(image_path, lambda_2, k, i)
-
+        print "Saving"
         fig, (img, dif1, dif2) = plt.subplots(nrows=1, ncols=3, figsize=(10, 5))
 
         img.imshow(image, cmap=plt.cm.gray)
