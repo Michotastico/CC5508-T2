@@ -30,4 +30,10 @@ def diffuse(h, k, lamb, top, down, center, left, right):
     return ans
 
 
+def images_path():
+    path = ['Images/bunny.jpg', 'Images/textura.jpg', 'Images/fruits_gray.jpg', 'Images/frutas.jpg',
+            'Images/hedgehog.jpg', 'Images/lenna.png', 'Images/lion_face.jpg', 'Images/notredame.jpg',
+            'Images/puppy.jpg', 'Images/woman_face.jpg']
+    return path
+
 

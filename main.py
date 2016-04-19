@@ -3,10 +3,10 @@ from skimage import io
 import matplotlib.pyplot as plt
 
 
-diffuse = Diffuse.Diffuse(functions.h1)
-
-image = io.imread('Images/lenna.png')
-diffuse_image = diffuse.apply('Images/lenna.png', 0.25, 50, 20)
+diffuse = Diffuse.Diffuse(functions.h2)
+image_path = 'Images/frutas.jpg'
+image = io.imread(image_path)
+diffuse_image = diffuse.apply(image_path, 0.25, 10, 10)
 
 fig, (img, dif) = plt.subplots(nrows=1, ncols=2, figsize=(10, 5))
 
